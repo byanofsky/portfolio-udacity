@@ -9,6 +9,17 @@ module.exports = function(grunt) {
                 src: config.cssSrcDir + 'main.css'
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    ext: '.min.css',
+                    src: config.cssSrcDir + '*.css',
+                    dest: config.cssDistDir
+                }]
+            }
+        },
         concat: {
             options: {
                 separator: ';/n'
@@ -41,6 +52,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'jshint',
         'csslint',
+        'cssmin',
         'htmlmin'
     ]);
 };
