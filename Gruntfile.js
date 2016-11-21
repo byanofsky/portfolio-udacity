@@ -4,18 +4,12 @@ module.exports = function(grunt) {
     var config = grunt.file.readYAML('Gruntconfig.yml');
 
     grunt.initConfig({
-        sass: {
-            dist: {
-                src: config.scssDir + 'style.scss',
-                dest: config.cssDir + 'style.css'
-            }
-        },
         csslint: {
             strict: {
                 options: {
                     important: 2
                 },
-                src: '<%= sass.dist.dest %>'
+                src: config
             }
         },
         jshint: {
@@ -33,13 +27,12 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: config.jsSrcDir + '**/*.js',
-                dest: config.jsConcatDir + 'built.js'
+                dest: config.jsDistDir + 'built.js'
             }
         }
     });
 
     grunt.registerTask('default', [
-        'sass',
         'csslint',
         'jshint',
         'concat'
