@@ -47,9 +47,13 @@ module.exports = function(grunt) {
         	]
         },
         watch: {
-            css: {
-                files: config.cssSrcDir + '*.css',
-                tasks: ['csslint']
+            // css: {
+            //     files: config.cssSrcDir + '*.css',
+            //     tasks: ['csslint']
+            // },
+            html: {
+                files: config.htmlSrcDir + '*.html',
+                tasks: ['htmlmin']
             }
         }
     });
@@ -59,6 +63,7 @@ module.exports = function(grunt) {
         'jshint',
         'csslint',
         'cssmin',
-        'htmlmin'
+        'htmlmin',
+        'watch'
     ]);
 };
