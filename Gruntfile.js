@@ -4,6 +4,11 @@ module.exports = function(grunt) {
     var config = grunt.file.readYAML('Gruntconfig.yml');
 
     grunt.initConfig({
+        clean: {
+            dist: {
+                src: 'dist'
+            }
+        },
         csslint: {
             lax: {
                 src: config.cssSrcDir + 'main.css'
@@ -50,6 +55,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
+        'clean',
         'jshint',
         'csslint',
         'cssmin',
