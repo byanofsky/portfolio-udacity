@@ -31,8 +31,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'csslint',
-        'concat',
-        'watch'
+        'csslint'
     ]);
 };
