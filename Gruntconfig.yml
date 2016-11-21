@@ -2,3 +2,5 @@ cssSrcDir: src/css/
 jsSrcDir: src/js/
 jsDistDir: dist/js/
 cssDistDir: dist/css/
+htmlSrcDir: src/
+htmlDistDir: dist/

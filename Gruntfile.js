@@ -11,26 +11,36 @@ module.exports = function(grunt) {
         },
         concat: {
             options: {
-                separator: ';/n',
+                separator: ';/n'
             },
             dist: {
                 src: config.jsSrcDir + '**/*.js',
                 dest: config.jsDistDir + 'built.js'
             }
         },
+        htmlmin: {
+            dist: {
+                files: {
+                    'dist/index.html': 'src/index.html'
+                }
+            }
+        },
+        jshint: {
+        	all: [
+        		'Gruntfile.js'
+        	]
+        },
         watch: {
             css: {
                 files: config.cssSrcDir + '*.css',
                 tasks: ['csslint']
-            },
-            js: {
-                files: config.jsSrcDir + '*.js',
-                tasks: ['jshint', 'concat']
             }
         }
     });
 
     grunt.registerTask('default', [
-        'csslint'
+        'jshint',
+        'csslint',
+        'htmlmin'
     ]);
 };
