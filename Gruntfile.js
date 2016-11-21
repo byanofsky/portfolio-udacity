@@ -9,15 +9,6 @@ module.exports = function(grunt) {
                 src: config.cssSrcDir + 'main.css'
             }
         },
-        jshint: {
-            options: {
-                'eqeqeq': true
-            },
-            all: [
-                'Gruntfile.js',
-                config.jsSrcDir + '*.js'
-            ]
-        },
         concat: {
             options: {
                 separator: ';/n',
@@ -41,7 +32,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'csslint',
-        'jshint',
-        'concat'
+        'concat',
+        'watch'
     ]);
 };
