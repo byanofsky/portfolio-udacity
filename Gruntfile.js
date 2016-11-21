@@ -5,11 +5,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         csslint: {
-            strict: {
-                options: {
-                    important: 2
-                },
-                src: config
+            lax: {
+                src: config.cssSrcDir + 'main.css'
             }
         },
         jshint: {
@@ -28,6 +25,16 @@ module.exports = function(grunt) {
             dist: {
                 src: config.jsSrcDir + '**/*.js',
                 dest: config.jsDistDir + 'built.js'
+            }
+        },
+        watch: {
+            css: {
+                files: config.cssSrcDir + '*.css',
+                tasks: ['csslint']
+            },
+            js: {
+                files: config.jsSrcDir + '*.js',
+                tasks: ['jshint', 'concat']
             }
         }
     });
