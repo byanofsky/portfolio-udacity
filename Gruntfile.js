@@ -99,7 +99,6 @@ module.exports = function(grunt) {
         'csslint',
         'cssmin',
         'htmlmin',
-        'responsive_images',
-        'watch'
+        'responsive_images'
     ]);
 };
