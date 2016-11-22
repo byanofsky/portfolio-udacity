@@ -40,7 +40,11 @@
     <main class="container">
         <div class="row">
             <div class="col-md-12">
-                <img src="http://placehold.it/1440x400" class="img-responsive" alt="Screenshot of Main Project">
+                <picture>
+                    <source srcset="img/office-scraper-1x.jpg,
+                                    img/office-scraper-2x.jpg 2x">
+                    <img src="img/office-scraper-1x.jpg" class="img-responsive" alt="Screenshot of Main Project">
+                </picture>
             </div>
         </div>
 
@@ -69,9 +73,25 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="container">
         <!-- TODO: Logo Credit Alfredo Hernandez - http://www.alfredocreates.com,
         Flaticon Basic License -http://file000.flaticon.com/downloads/license/license.pdf -->
+        <div class="page-footer row">
+            <div class="col-md-6">
+                <p class="text-left">
+                    Portfolio Project for Udacity's Full Stack Nanodegree
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="text-right">
+                    Logo icon designed by
+                    <a href="http://www.alfredocreates.com"
+                       target="_blank">
+                    Alfredo Hernandez</a> from Flaticon. Other images from
+                    <a href="https://unsplash.it/images">Unsplash It</a>.
+                </p>
+            </div>
+        </div>
     </footer>
 
 </body>
