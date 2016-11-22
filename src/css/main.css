@@ -17,8 +17,27 @@ h6,
     font-family: 'Concert One', sans-serif;
 }
 
+.header-logo img {
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.header-title {
+    text-align: center;
+}
+
 .page-footer {
     padding-top: 9px;
     margin: 40px 0 20px;
     border-top: 1px solid #eee;
+}
+
+@media screen and (min-width: 768px) {
+    .header-logo img {
+        max-width: 100%;
+    }
+
+    .header-title {
+        text-align: right;
+    }
 }
