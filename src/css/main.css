@@ -1,3 +1,10 @@
+/*
+ * Main style to add and overwrite bootstrap
+ * Color guide - red (#f33052), black (#000), blue (#22acdd)
+ * -----------------------------------------------------------------------------
+ */
+
+/* Add Google fonts */
 body {
     font-family: 'Neuton', serif;
 }
@@ -14,9 +21,68 @@ h6,
 .h4,
 .h5,
 .h6 {
+    color: #22acdd;
     font-family: 'Concert One', sans-serif;
 }
 
+a {
+    color: #22acdd;
+}
+
+a:focus,
+a:hover {
+    color: #000;
+}
+
+
+/*
+ * Featured Image section
+ * -----------------------------------------------------------------------------
+ */
+
+ .featured-image {
+     margin-bottom: 20px;
+ }
+
+
+/*
+ * Featured Work section
+ * -----------------------------------------------------------------------------
+ */
+
+.featured-item {
+    margin: 0 0 40px;
+    text-align: center;
+ }
+
+.featured-item .thumbnail {
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    color: #000;
+    margin-top: 10px;
+ }
+
+
+/*
+ * Global styling of Bootstrap elements
+ * -----------------------------------------------------------------------------
+ */
+
+ a.thumbnail.active,
+ a.thumbnail:focus,
+ a.thumbnail:hover {
+    border-color: #22acdd;
+}
+
+
+/*
+ * Styling for smaller screens
+ * -----------------------------------------------------------------------------
+ */
+
+/* Set a max width of logo on smaller screens */
 .header-logo img {
     max-width: 125px;
     margin: 0 auto;
@@ -26,11 +92,24 @@ h6,
     text-align: center;
 }
 
+/* Add a page footer style to match page-header from bootstrap */
 .page-footer {
     padding-top: 9px;
-    margin: 40px 0 20px;
+    /* Margin not in shorthand so as not to overwrite .row margin */
+    margin-top: 40px;
+    margin-bottom: 20px;
     border-top: 1px solid #eee;
 }
+
+.page-footer {
+    text-align: center;
+}
+
+
+/*
+ * Styling for larger screens
+ * -----------------------------------------------------------------------------
+ */
 
 @media screen and (min-width: 768px) {
     .header-logo img {
@@ -38,6 +117,20 @@ h6,
     }
 
     .header-title {
+        text-align: right;
+    }
+
+    /* Remove margin when project items in a row */
+    .featured-item {
+        margin: 0;
+    }
+
+    /* Set styling for text in footer columns */
+    .footer-description {
+        text-align: left;
+    }
+
+    .footer-copyright {
         text-align: right;
     }
 }

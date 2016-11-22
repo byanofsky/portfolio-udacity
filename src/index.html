@@ -12,7 +12,7 @@
     <link href="css/main.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Concert+One|Neuton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One%7CNeuton" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +26,7 @@
     <header class="container">
         <div class="page-header row">
             <div class="col-sm-2 header-logo">
+                <!-- TODO: Add a new logo image -->
                 <img src="img/browser.svg" class="img-responsive" alt="Profile of Brandon Yanofsky">
             </div>
             <div class="col-sm-10 text-uppercase header-title">
@@ -37,8 +38,9 @@
     </header>
 
     <!-- page's main section -->
+    <!-- TODO: add a main image -->
     <main class="container">
-        <div class="row">
+        <div class="featured-image row">
             <div class="col-md-12">
                 <picture>
                     <source media="(max-width: 767px)"
@@ -54,15 +56,15 @@
         </div>
 
         <!-- new semantic section to denoate featured work -->
-        <section>
+        <section class="featured-work">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- H1 used for semnatic purposes here -->
-                    <h1>Featured Work</h1>
+                    <h2>Featured Work</h2>
                 </div>
             </div>
+            <!-- TODO: Add project names, images, and links -->
             <div class="row">
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 featured-item">
                     <a href="#" class="thumbnail">
                         <picture>
                             <source media="(min-width: 391px) and (max-width: 767px)"
@@ -75,9 +77,9 @@
                                  alt="White building in front of sky">
                         </picture>
                     </a>
-                    <h2>Project 1</h2>
+                    <h3 class="feature-title">Project 1</h3>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 featured-item">
                     <a href="#" class="thumbnail">
                         <picture>
                             <source media="(min-width: 391px) and (max-width: 767px)"
@@ -90,9 +92,9 @@
                                  alt="Spiral of light">
                         </picture>
                     </a>
-                    <h2>Project 2</h2>
+                    <h3 class="feature-title">Project 2</h3>
                 </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4 featured-item">
                     <a href="#" class="thumbnail">
                         <picture>
                             <source media="(min-width: 391px) and (max-width: 767px)"
@@ -105,23 +107,21 @@
                                  alt="Skyscrapers">
                         </picture>
                     </a>
-                    <h2>Project 3</h2>
+                    <h3 class="feature-title">Project 3</h3>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="container">
-        <!-- TODO: Logo Credit Alfredo Hernandez - http://www.alfredocreates.com,
-        Flaticon Basic License -http://file000.flaticon.com/downloads/license/license.pdf -->
         <div class="page-footer row">
-            <div class="col-md-6">
-                <p class="text-left">
+            <div class="col-sm-6 footer-description">
+                <p>
                     Portfolio Project for Udacity's Full Stack Nanodegree
                 </p>
             </div>
-            <div class="col-md-6">
-                <p class="text-right">
+            <div class="col-sm-6 footer-copyright">
+                <p>
                     Logo icon designed by
                     <a href="http://www.alfredocreates.com"
                        target="_blank">
@@ -131,6 +131,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
