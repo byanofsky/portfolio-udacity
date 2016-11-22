@@ -57,10 +57,10 @@ module.exports = function(grunt) {
         	]
         },
         watch: {
-            // css: {
-            //     files: config.cssSrcDir + '*.css',
-            //     tasks: ['csslint']
-            // },
+            css: {
+                files: config.cssSrcDir + '*.css',
+                tasks: ['cssmin']
+            },
             html: {
                 files: config.htmlSrcDir + '*.html',
                 tasks: ['htmlmin']
