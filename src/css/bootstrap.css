@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=2f680202089187473a4775906af74e82)
- * Config saved to config.json and https://gist.github.com/2f680202089187473a4775906af74e82
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=5f642935bddbb77c80bedd7f2dbd5b87)
+ * Config saved to config.json and https://gist.github.com/5f642935bddbb77c80bedd7f2dbd5b87
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -1121,7 +1121,9 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -3462,6 +3464,32 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
 }
 .media {
   margin-top: 15px;
