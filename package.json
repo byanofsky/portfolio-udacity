@@ -22,6 +22,7 @@
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-responsive-images": "^0.1.9",
     "load-grunt-tasks": "^3.2.0"
   }
 }

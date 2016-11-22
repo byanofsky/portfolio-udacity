@@ -56,6 +56,30 @@ module.exports = function(grunt) {
         		'Gruntfile.js'
         	]
         },
+        responsive_images: {
+            dist: {
+                options: {
+                    engine: 'im',
+                    sizes: [{
+                        width: '100%',
+                        rename: false,
+                        suffix: '-2x',
+                        quality: 50
+                    }, {
+                        width: '50%',
+                        rename: false,
+                        suffix: '-1x',
+                        quality: 50
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['src/img/**.{jpg,gif,png}'],
+                    dest: 'dist/img/'
+                }]
+            }
+        },
         watch: {
             css: {
                 files: config.cssSrcDir + '*.css',
@@ -75,6 +99,7 @@ module.exports = function(grunt) {
         'csslint',
         'cssmin',
         'htmlmin',
+        'responsive_images',
         'watch'
     ]);
 };
