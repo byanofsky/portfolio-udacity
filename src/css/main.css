@@ -16,3 +16,9 @@ h6,
 .h6 {
     font-family: 'Concert One', sans-serif;
 }
+
+.page-footer {
+    padding-top: 9px;
+    margin: 40px 0 20px;
+    border-top: 1px solid #eee;
+}
