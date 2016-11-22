@@ -9,6 +9,16 @@ module.exports = function(grunt) {
                 src: 'dist'
             }
         },
+        copy: {
+            svg: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['src/img/*.svg'],
+                    dest: 'dist/img/'
+                }]
+            }
+        },
         csslint: {
             lax: {
                 src: config.cssSrcDir + 'main.css'
@@ -61,6 +71,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean',
         'jshint',
+        'copy',
         'csslint',
         'cssmin',
         'htmlmin',
